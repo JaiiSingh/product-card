@@ -7,14 +7,18 @@ body{
     text-align: center;
 }
 .container{
-    padding: 10%;
+    padding: 10% 10% 0% 10%;
     height: 100vh;
+    background-color: #001524;
 }
 .product-card{
     display: flex;
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0 40px black;
 }
 .product-description{
-    background-color: aqua;
+    background-color: #EEEEEE;
 }
 .product-description, .product-div{
     display: inline-block;
@@ -23,7 +27,7 @@ body{
     overflow: hidden;
 }
 .product-description >h3{
-  margin-top: 10%;
+  margin-top: 20%;
   text-indent: 5%;
 }
 .product-description>h3,p{
@@ -50,6 +54,7 @@ body{
     color: white;
     position: absolute;
     left: -100%;
+    transition: all .3s ease-in-out;
 }
 .product-highlight>h4{
     text-indent: 40px;
@@ -68,17 +73,47 @@ body{
 }
 .product-div:hover .product-highlight{
     left: 0%;
-    transition: all .3s ease-in-out;
+   
 }
-.btn{
+.product-description button{
+    position: relative;
+    padding: 2% 4% 2% 20%;
+    margin: 5% auto 10% auto;
+    background-color: rgb(85, 177, 146);
     border: none;
-    width:15vw;
-    margin-top: 20%;
-    background-color: beige;
-    text-align: left;
+    border-radius: 30px;
+    overflow: hidden;
+    color: white;
 }
-.btn div{
+.price-tag, .shop-cart{
     display: inline-block;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    padding-top: 5%;
+    background-color: blueviolet;
+    font-size: 1.2rem;
+    transition: all .4s ease-in-out;
 }
-/* .cart-icn{width: 30%;} */
-.btn-txt{width: 50%;}
+.price-tag{
+left: 0;
+top: 0;
+}
+
+.shop-cart{
+    left: -40%;
+    top: 0;
+}
+.product-description button:hover{
+    cursor: pointer;
+}
+.product-description button:hover .shop-cart{
+ left: 0;
+}
+.product-description button:hover .price-tag{
+    left: -40%;
+}
+.cart-text{
+    text-wrap: nowrap;
+    font-size: 1.2rem;
+}
